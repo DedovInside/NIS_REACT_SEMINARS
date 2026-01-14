@@ -1,0 +1,138 @@
+.unread-messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.message-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 500px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.message-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.message-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+
+.message-count-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4757;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 12px;
+  min-width: 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message-text {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.message-text .highlight {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffd93d;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.message-date {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .message-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .message-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .message-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .message-text {
+    font-size: 1.1rem;
+  }
+
+  .message-text .highlight {
+    font-size: 1.3rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .message-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+}

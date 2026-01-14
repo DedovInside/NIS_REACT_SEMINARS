@@ -10,9 +10,9 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f83c9d 0%, #fb0047 100%);
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 32px rgba(255, 0, 191, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 500px;
   animation: fadeIn 0.5s ease-in-out;
@@ -20,7 +20,7 @@
 
 .message-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 12px 40px rgba(128, 0, 255, 0.4);
 }
 
 @keyframes fadeIn {
